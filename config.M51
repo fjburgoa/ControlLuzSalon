@@ -1,0 +1,270 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0          12/21/2022  12:32:09  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE C:\Users\fjb29\OneDrive\Documentos\GitHub\F300\Con
+>> trolLuzSalon\config.obj, C:\Users\fjb29\OneDrive\Documentos\GitHub\F300\Con
+>> trolLuzSalon\prim2.obj TO C:\Users\fjb29\OneDrive\Documentos\GitHub\F300\Co
+>> ntrolLuzSalon\config RS (256) PL (68) PW (78)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  C:\Users\fjb29\OneDrive\Documentos\GitHub\F300\ControlLuzSalon\config.obj (C
+>> ONFIG)
+  C:\Users\fjb29\OneDrive\Documentos\GitHub\F300\ControlLuzSalon\prim2.obj (PR
+>> IM2)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  C:\Users\fjb29\OneDrive\Documentos\GitHub\F300\ControlLuz
+>> Salon\config (CONFIG)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000DH     UNIT         ?DT?PRIM2
+            IDATA   0015H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+                    000EH     07F2H                  *** GAP ***
+            CODE    0800H     008CH     UNIT         ?C_C51STARTUP
+            CODE    088CH     0049H     UNIT         ?PR?INT_TIMER0?PRIM2
+            CODE    08D5H     002EH     UNIT         ?PR?MAIN?PRIM2
+            CODE    0903H     001BH     UNIT         ?PR?INIT_DEVICE?CONFIG
+            CODE    091EH     001AH     UNIT         ?C_INITSEG
+            CODE    0938H     000DH     UNIT         ?PR?TIMER_INIT?CONFIG
+            CODE    0945H     0007H     UNIT         ?PR?PCA_INIT?CONFIG
+            CODE    094CH     0007H     UNIT         ?PR?PORT_IO_INIT?CONFIG
+            CODE    0953H     0004H     UNIT         ?PR?RESET_SOURCES_INIT?CO
+>> NFIG
+            CODE    0957H     0004H     UNIT         ?PR?OSCILLATOR_INIT?CONFI
+>> G
+            CODE    095BH     0004H     UNIT         ?PR?INTERRUPTS_INIT?CONFI
+>> G
+            CODE    095FH     0001H     UNIT         ?PR?UART_INIT?CONFIG
+            CODE    0960H     0001H     UNIT         ?PR?ADC_INIT?CONFIG
+            CODE    0961H     0001H     UNIT         ?PR?VOLTAGE_REFERENCE_INI
+>> T?CONFIG
+
+
+
+OVERLAY MAP OF MODULE:   C:\Users\fjb29\OneDrive\Documentos\GitHub\F300\Contro
+>> lLuzSalon\config (CONFIG)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?PRIM2
+BL51 BANKED LINKER/LOCATER V6.22.2.0        12/21/2022  12:32:09  PAGE 2
+
+
+  +--> ?C_INITSEG
+
+?PR?MAIN?PRIM2
+  +--> ?PR?INIT_DEVICE?CONFIG
+
+?PR?INIT_DEVICE?CONFIG
+  +--> ?PR?RESET_SOURCES_INIT?CONFIG
+  +--> ?PR?PCA_INIT?CONFIG
+  +--> ?PR?TIMER_INIT?CONFIG
+  +--> ?PR?UART_INIT?CONFIG
+  +--> ?PR?ADC_INIT?CONFIG
+  +--> ?PR?VOLTAGE_REFERENCE_INIT?CONFIG
+  +--> ?PR?PORT_IO_INIT?CONFIG
+  +--> ?PR?OSCILLATOR_INIT?CONFIG
+  +--> ?PR?INTERRUPTS_INIT?CONFIG
+
+
+
+SYMBOL TABLE OF MODULE:  C:\Users\fjb29\OneDrive\Documentos\GitHub\F300\Contro
+>> lLuzSalon\config (CONFIG)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        CONFIG
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00E8H         PUBLIC        ADC0CN
+  D:00A4H         PUBLIC        P0MDOUT
+  D:00A8H         PUBLIC        IE
+  C:094CH         PUBLIC        Port_IO_Init
+  D:00D9H         PUBLIC        PCA0MD
+  D:00D8H         PUBLIC        PCA0CN
+  D:00B8H         PUBLIC        IP
+  C:0957H         PUBLIC        Oscillator_Init
+  D:00E3H         PUBLIC        XBR2
+  D:00C0H         PUBLIC        SMB0CN
+  D:00F8H         PUBLIC        CPT0CN
+  C:095FH         PUBLIC        UART_Init
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        TMR2CN
+  C:095BH         PUBLIC        Interrupts_Init
+  C:0960H         PUBLIC        ADC_Init
+  D:00B2H         PUBLIC        OSCICN
+  C:0961H         PUBLIC        Voltage_Reference_Init
+  C:0953H         PUBLIC        Reset_Sources_Init
+  C:0903H         PUBLIC        Init_Device
+  C:0945H         PUBLIC        PCA_Init
+  D:008CH         PUBLIC        TH0
+  D:00EFH         PUBLIC        RSTSRC
+  D:0098H         PUBLIC        SCON0
+  D:008EH         PUBLIC        CKCON
+  C:0938H         PUBLIC        Timer_Init
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          RESET_SOURCES_INIT
+  C:0953H         LINE#         9
+  C:0953H         LINE#         10
+  C:0953H         LINE#         11
+  C:0956H         LINE#         12
+  -------         ENDPROC       RESET_SOURCES_INIT
+  -------         PROC          PCA_INIT
+  C:0945H         LINE#         14
+  C:0945H         LINE#         15
+  C:0945H         LINE#         16
+  C:0948H         LINE#         17
+BL51 BANKED LINKER/LOCATER V6.22.2.0        12/21/2022  12:32:09  PAGE 3
+
+
+  C:094BH         LINE#         18
+  -------         ENDPROC       PCA_INIT
+  -------         PROC          TIMER_INIT
+  C:0938H         LINE#         20
+  C:0938H         LINE#         21
+  C:0938H         LINE#         22
+  C:093BH         LINE#         23
+  C:093EH         LINE#         24
+  C:0941H         LINE#         25
+  C:0944H         LINE#         26
+  -------         ENDPROC       TIMER_INIT
+  -------         PROC          UART_INIT
+  C:095FH         LINE#         28
+  C:095FH         LINE#         29
+  C:095FH         LINE#         31
+  -------         ENDPROC       UART_INIT
+  -------         PROC          ADC_INIT
+  C:0960H         LINE#         33
+  C:0960H         LINE#         34
+  C:0960H         LINE#         36
+  -------         ENDPROC       ADC_INIT
+  -------         PROC          VOLTAGE_REFERENCE_INIT
+  C:0961H         LINE#         38
+  C:0961H         LINE#         39
+  C:0961H         LINE#         41
+  -------         ENDPROC       VOLTAGE_REFERENCE_INIT
+  -------         PROC          PORT_IO_INIT
+  C:094CH         LINE#         43
+  C:094CH         LINE#         44
+  C:094CH         LINE#         47
+  C:094FH         LINE#         48
+  C:0952H         LINE#         49
+  -------         ENDPROC       PORT_IO_INIT
+  -------         PROC          OSCILLATOR_INIT
+  C:0957H         LINE#         51
+  C:0957H         LINE#         52
+  C:0957H         LINE#         53
+  C:095AH         LINE#         54
+  -------         ENDPROC       OSCILLATOR_INIT
+  -------         PROC          INTERRUPTS_INIT
+  C:095BH         LINE#         56
+  C:095BH         LINE#         57
+  C:095BH         LINE#         58
+  C:095EH         LINE#         59
+  -------         ENDPROC       INTERRUPTS_INIT
+  -------         PROC          INIT_DEVICE
+  C:0903H         LINE#         63
+  C:0903H         LINE#         64
+  C:0903H         LINE#         65
+  C:0906H         LINE#         66
+  C:0909H         LINE#         67
+  C:090CH         LINE#         68
+  C:090FH         LINE#         69
+  C:0912H         LINE#         70
+  C:0915H         LINE#         71
+  C:0918H         LINE#         72
+  C:091BH         LINE#         73
+  -------         ENDPROC       INIT_DEVICE
+  -------         ENDMOD        CONFIG
+
+  -------         MODULE        PRIM2
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:088CH         PUBLIC        int_timer0
+  B:0080H.3       PUBLIC        ENTRADA
+BL51 BANKED LINKER/LOCATER V6.22.2.0        12/21/2022  12:32:09  PAGE 4
+
+
+  D:0008H         PUBLIC        entrada_old
+  D:00E8H         PUBLIC        ADC0CN
+  D:00A8H         PUBLIC        IE
+  D:00D8H         PUBLIC        PCA0CN
+  D:00B8H         PUBLIC        IP
+  D:00C0H         PUBLIC        SMB0CN
+  C:08D5H         PUBLIC        main
+  D:00F8H         PUBLIC        CPT0CN
+  D:0009H         PUBLIC        power
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        TMR2CN
+  D:0010H         PUBLIC        cnt
+  D:0011H         PUBLIC        flag_int
+  B:0080H.2       PUBLIC        LED
+  D:0012H         PUBLIC        contador
+  D:0014H         PUBLIC        entrada
+  D:0098H         PUBLIC        SCON0
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          INT_TIMER0
+  C:088CH         LINE#         27
+  C:0897H         LINE#         30
+  C:089FH         LINE#         31
+  C:08AAH         LINE#         32
+  C:08AAH         LINE#         33
+  C:08B0H         LINE#         34
+  C:08B3H         LINE#         35
+  C:08B3H         LINE#         37
+  C:08C6H         LINE#         38
+  C:08C6H         LINE#         39
+  C:08C8H         LINE#         40
+  C:08CAH         LINE#         42
+  C:08CAH         LINE#         43
+  C:08CCH         LINE#         44
+  C:08CCH         LINE#         46
+  -------         ENDPROC       INT_TIMER0
+  -------         PROC          MAIN
+  C:08D5H         LINE#         49
+  C:08D5H         LINE#         51
+  C:08D8H         LINE#         53
+  C:08D8H         LINE#         54
+  C:08D8H         LINE#         56
+  C:08DBH         LINE#         57
+  C:08E1H         LINE#         60
+  C:08EFH         LINE#         61
+  C:08EFH         LINE#         62
+  C:08F1H         LINE#         63
+  C:08F3H         LINE#         64
+  C:08FEH         LINE#         65
+  C:0901H         LINE#         67
+  C:0901H         LINE#         69
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        PRIM2
+
+******************************************************************************
+>> 
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00D8H BYTE (10%) *
+>> 
+******************************************************************************
+>> 
+
+Program Size: data=22.0 xdata=0 code=360
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,15 @@
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0 - SN: Eval Version
+COPYRIGHT ARM Germany GmbH 1987 - 2017
+"C:\Users\fjb29\OneDrive\Documentos\GitHub\F300\ControlLuzSalon\config.obj",
+"C:\Users\fjb29\OneDrive\Documentos\GitHub\F300\ControlLuzSalon\prim2.obj"  TO "C:\Users\fjb29\OneDrive\Documentos\GitHub\F300\ControlLuzSalon\config" RS(256) PL(68) PW(78) 
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00D8H BYTE (10%) *
+******************************************************************************
+
+>> 
+>> 
+>> 
+Program Size: data=22.0 xdata=0 code=360
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
